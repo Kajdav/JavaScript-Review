@@ -68,6 +68,13 @@ map(, function(num){
   return num * 2; //returns an array of [2,4,6,8,10]
 });
 
+function map(array, cb) {
+  var transformedNumbers = [];
+  for (var i = array.length - 1; i >= 0; i--) {
+    transformedNumbers.unshift(cb(array[i]));
+  }
+  return transformedNumbers;
+}
 
 
 
